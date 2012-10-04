@@ -1,5 +1,5 @@
 # Accel #
-####  ####
+#### A one meter diameter continuous pulsed solenoid for testing control and feedback algorithms ####
 
 ---
 
