@@ -1,6 +1,6 @@
 # Accel #
-#### A one meter diameter continuous pulsed solenoid for testing control and feedback algorithms ####
-
+#### A 50cm diameter continuous pulsed solenoid for testing control and feedback algorithms ####
+#### This can be considered to be a sort of infinite controlled coil gun ####
 ---
 
 *File Structure*
