@@ -1,12 +1,12 @@
 # Accel #
 #### A 50cm diameter continuous pulsed solenoid for testing control and feedback algorithms ####
-#### This can be considered to be a sort of infinite controlled coil gun ####
+#### This can be considered to be a sort of infinite controlled coil gun or a miniature round mass-driver ####
 ---
 
 *File Structure*
 
-* ./Firmware/ --> Firmware for the project (Written in C Utilizing AVR Studio 5 and AVRGCC)
-* ./Hardware/ --> Sketchup parts
+* ./Firmware/ --> Firmware for the project (Written in C Utilizing AVR Studio 6)
+* ./Hardware/ --> OpenSCAD part file and .STL file
 * ./ElecHardware/ --> Kicad Projects for Accel
 * ./GerberOutput/ --> The latest PCB Gerber Files for manufacture
 * ./Notes/ --> Project Notes, BOM, and Research

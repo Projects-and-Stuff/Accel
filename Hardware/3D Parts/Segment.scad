@@ -8,7 +8,7 @@ difference() {
 	union() {
 	
 		//Outer Tube
-		rotate_extrude(convexity = 10, $fn = 120)
+		rotate_extrude(convexity = 10, $fn = 240)
 		translate([250, 0, 0])
 		circle(r = 10, $fn = 100);
 
@@ -17,7 +17,7 @@ difference() {
 	// Create the Standard End
 	translate([250, 0, 0]){
 		difference() {
-			
+			union() { // Combine the two triangles
 				// Triangular Portion
 				rotate(a=90, v=[0,0,90]) {
 					rotate(a=180, v=[1,0,0]) {
@@ -26,6 +26,22 @@ difference() {
 						}
 					}
 				}
+				
+				// Upside Down Triangular Portion
+				translate([0, 0, 14.95]){
+					rotate(a=90, v=[0,0,1]) {
+						rotate(a=0, v=[1,0,0]) {
+							rotate(a=90, v=[0,1,0]) {
+								cylinder(h = 7.5, r=15, $fn=3);
+							}
+						}
+					}	
+				}
+				
+				
+				
+				
+			}
 
 			// Top Cut-off
 				translate([0, 0, 25]){
@@ -53,7 +69,23 @@ difference() {
 						}
 					}
 				}
-			
+				
+			// Top Screw Holes
+				translate([0, 0, 15.5]){ // Move cylinder to bottom of triangular end
+					translate([0, 3.73, 0]){ // Move cylinder to middle width-wise
+						translate([6, 0, 0]){ // Move cylinder toward traingle corner
+							cylinder(h = 7, r=1.2, $fn=18); 
+						}
+					}
+				}
+				translate([0, 0, 15.5]){ // Move cylinder to bottom of triangular end
+					translate([0, 3.73, 0]){ // Move cylinder to middle width-wise
+						translate([-6, 0, 0]){ // Move cylinder toward traingle corner
+							cylinder(h = 7, r=1.2, $fn=18); 
+						}
+					}
+				}
+
 			// Side Screw Holes (Smaller to actually screw in)
 				rotate(a=90, v=[1,0,0]) { // TOP Screw Hole
 					translate([0, 0, -8]){ // Move along Y
@@ -95,7 +127,7 @@ difference() {
 					
 			translate([0, -7.5, 0]){
 				difference() {
-
+					union() { // Combine the two triangles
 						// Triangular Portion
 						rotate(a=90, v=[0,0,90]) {
 							rotate(a=180, v=[1,0,0]) {
@@ -104,7 +136,19 @@ difference() {
 								}
 							}
 						}
-
+						
+						// Upside Down Triangular Portion
+						translate([0, 0, 14.95]){
+							rotate(a=90, v=[0,0,1]) {
+								rotate(a=0, v=[1,0,0]) {
+									rotate(a=90, v=[0,1,0]) {
+										cylinder(h = 7.5, r=15, $fn=3);
+									}
+								}
+							}	
+						}
+						
+					}
 
 					// Top Cut-off
 						translate([0, 0, 25]){
@@ -133,6 +177,22 @@ difference() {
 							}
 						}
 				
+					// Top Screw Holes
+						translate([0, 0, 15.5]){ // Move cylinder to bottom of triangular end
+							translate([0, 3.73, 0]){ // Move cylinder to middle width-wise
+								translate([6, 0, 0]){ // Move cylinder toward traingle corner
+									cylinder(h = 7, r=1.2, $fn=18); 
+								}
+							}
+						}
+						translate([0, 0, 15.5]){ // Move cylinder to bottom of triangular end
+							translate([0, 3.73, 0]){ // Move cylinder to middle width-wise
+								translate([-6, 0, 0]){ // Move cylinder toward traingle corner
+									cylinder(h = 7, r=1.2, $fn=18); 
+								}
+							}
+						}
+
 					// Side Screw Holes (Larger for free movement)
 						rotate(a=90, v=[1,0,0]) { // TOP Screw Hole
 							translate([0, 0, -8]){ // Move along Y
@@ -253,7 +313,7 @@ difference() {
 
 
 	// Inner tube
-	rotate_extrude(convexity = 10, $fn = 120)
+	rotate_extrude(convexity = 10, $fn = 240)
 	translate([250, 0, 0])
 	circle(r = 7.5, $fn = 100);
 	
