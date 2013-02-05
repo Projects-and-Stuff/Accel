@@ -1,6 +1,6 @@
 # Accel #
 #### A 50cm diameter continuous pulsed solenoid for testing control and feedback algorithms ####
-#### This can be considered to be a sort of infinite controlled coil gun or a miniature round mass-driver ####
+#### This can be considered to be a sort of infinite controlled coil gun or a miniature circular mass-driver ####
 ---
 
 *File Structure*
